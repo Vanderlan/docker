@@ -1,0 +1,7 @@
+version: "3.5"
+services:
+  azurite_blobstorage:
+    image: mcr.microsoft.com/azure-storage/azurite
+    container_name: azurite_blobstorage
+    ports:
+      - "10000:10000"

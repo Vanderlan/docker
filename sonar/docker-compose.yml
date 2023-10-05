@@ -1,0 +1,14 @@
+version: '3.5'
+services:
+  sonarqube:
+     image: sonarqube:community
+     container_name: sonarqube
+     ports:
+       - 9000:9000
+       - 9092:9092
+     environment:
+       - SONAR_JDBC_USERNAME=sa
+       - SONAR_JDBC_PASSWORD=123
+       - SONAR_JDBC_URL=jdbc:sqlserver://100.64.1.206;databaseName=sonarqube;encrypt=false
+     restart: always
+
